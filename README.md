@@ -30,7 +30,7 @@ The goal is **mechanistic clarity** rather than abstraction, making the code sui
 
 At each time step \( t \), the LSTM computes:
 
-\[
+$$
 \begin{aligned}
 I_t &= \sigma(X_t W_{xi} + H_{t-1} W_{hi} + b_i) \\
 F_t &= \sigma(X_t W_{xf} + H_{t-1} W_{hf} + b_f) \\
@@ -39,7 +39,7 @@ O_t &= \sigma(X_t W_{xo} + H_{t-1} W_{ho} + b_o) \\
 C_t &= F_t \odot C_{t-1} + I_t \odot \tilde{C}_t \\
 H_t &= O_t \odot \tanh(C_t)
 \end{aligned}
-\]
+$$
 
 All parameters are learned explicitly, without relying on PyTorch’s high-level recurrent modules.
 
