@@ -26,7 +26,9 @@ The goal is **mechanistic clarity** rather than abstraction, making the code sui
 
 ## Model Overview
 
-The LSTM cell is implemented directly using the canonical equations:
+### LSTM Cell Equations
+
+At each time step \( t \), the LSTM computes:
 
 \[
 \begin{aligned}
